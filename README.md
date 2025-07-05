@@ -2,7 +2,7 @@
 A collection of handy scripts for everyday tasks, most of which were written using AI assistants.
 
 ## Installation
-Place scripts in the `/usr/bin` directory. This allow you to run them directly from the shell using their name. For example:
+Place scripts in the `/usr/bin` directory. This allows you to run them directly from the shell using their name. For example:
 ```bash
 handy.urldecoder https%3A%2F%2Fgoogle.com%2Fsearch%3Fq%3Durldecode%2Bbash.
 ```
