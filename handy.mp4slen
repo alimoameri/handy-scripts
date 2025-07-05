@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+total_duration=0
+for file in $1/*.mp4; do
+    if [ -f "$file" ]; then
+        duration=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$file")
+        total_duration=$(echo "$total_duration + $duration" | bc)
+    fi
+done
+total_minutes=$(echo "scale=2; $total_duration / 60" | bc)
+echo "Total Duration: $total_minutes minutes"
+

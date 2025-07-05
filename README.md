@@ -7,11 +7,14 @@ Place scripts in the `/usr/bin` directory. This allow you to run them directly f
 handy.urldecoder https%3A%2F%2Fgoogle.com%2Fsearch%3Fq%3Durldecode%2Bbash.
 ```
 
-Otherwise, you can run them with `python3`:
+Otherwise, you can run them with `python3` if it's a python scrpit or `bash` if it's a bash script:
 ```bash
 python3 handy.urldecoder https%3A%2F%2Fgoogle.com%2Fsearch%3Fq%3Durldecode%2Bbash.
 ```
 
+```bash
+bash handy.mp4slen <directory_path>
+```
 
 ## urldecoder
 Decodes percent-encoded URLs, converting them back to their original human-readable format. 
@@ -29,4 +32,12 @@ https://maktabkhooneh.org/course/آموزش-برنامه-نویسی-با-پای�
 ### Usage:
 ```bash
 python3 handy.urldecoder <encoded_url>
+```
+
+## mp4slen
+Calculate the total length of all mp4 files in a directory.
+
+### Usage:
+```bash
+bash handy.mp4slen <directory_path>
 ```
