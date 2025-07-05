@@ -8,7 +8,7 @@ def decode_url(encoded_url):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python ali.urldecoder.py <encoded_url>")
+        print("Usage: python handy.urldecoder.py <encoded_url>")
         sys.exit(1)
 
     encoded_url = sys.argv[1]
