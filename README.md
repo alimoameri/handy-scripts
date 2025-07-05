@@ -6,5 +6,5 @@ Decodes percent-encoded URLs, converting them back to their original human-reada
 
 Usage:
 ```bash
-python3 ali.urldecode.py <encoded_url>
+python3 ali.urldecoder.py <encoded_url>
 ```
