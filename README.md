@@ -19,25 +19,35 @@ bash handy.mp4slen <directory_path>
 ## urldecoder
 Decodes percent-encoded URLs, converting them back to their original human-readable format. 
 
-### Input:
-```
-https://maktabkhooneh.org/course/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%A8%D8%A7-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-%D9%85%D9%82%D8%AF%D9%85%D8%A7%D8%AA%DB%8C-mk346/%DA%A9%D8%A7%D8%B1-%D8%B9%DA%A9%D8%B3%D9%87%D8%A7-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-ch23774/%D8%A7%D8%AF%DB%8C%D8%AA-%D8%B9%DA%A9%D8%B3-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-%D8%A8%D8%AE%D8%B4-%D8%AF%D9%88%D9%85/
-```
-
-### Onput:
-```
-https://maktabkhooneh.org/course/آموزش-برنامه-نویسی-با-پایتون-مقدماتی-mk346/کار-عکسها-پایتون-ch23774/ادیت-عکس-پایتون-بخش-دوم/
-```
-
-### Usage:
+### Usage
 ```bash
 python3 handy.urldecoder <encoded_url>
 ```
 
-## mp4slen
-Calculate the total length of all mp4 files in a directory.
+### Example
+```bash
+python3 handy.urldecoder https://maktabkhooneh.org/course/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%A8%D8%A7-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-%D9%85%D9%82%D8%AF%D9%85%D8%A7%D8%AA%DB%8C-mk346/%DA%A9%D8%A7%D8%B1-%D8%B9%DA%A9%D8%B3%D9%87%D8%A7-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-ch23774/%D8%A7%D8%AF%DB%8C%D8%AA-%D8%B9%DA%A9%D8%B3-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-%D8%A8%D8%AE%D8%B4-%D8%AF%D9%88%D9%85/
+```
+
+#### Output:
+```bash
+https://maktabkhooneh.org/course/آموزش-برنامه-نویسی-با-پایتون-مقدماتی-mk346/کار-عکسها-پایتون-ch23774/ادیت-عکس-پایتون-بخش-دوم/
+```
+
+
+
+## media_duration
+Calculate the total duration of specific media files in a directory.
 
 ### Usage:
 ```bash
-bash handy.mp4slen <directory_path>
+bash handy.media_duration <directory_path> <media_file_extension>
 ```
+
+### Example
+```bash
+handy.media_duration -p ~/Downloads -e mp4
+```
+
+### Output
+2.87 hours | 172.46 minutes | 10347.61 seconds 

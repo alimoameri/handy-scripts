@@ -1,0 +1,34 @@
+#!/usr/bin/bash
+
+# Initialize variables
+directory=""
+extension=""
+
+# Parse command-line options
+while getopts "p:e:" opt; do
+    case $opt in
+        p) directory="$OPTARG" ;;
+        e) extension="$OPTARG" ;;
+        *) echo "Usage: $0 -p <directory_path> -e <media_file_extension>"
+           exit 1 ;;
+    esac
+done
+
+# Check if both options are provided
+if [ -z "$directory" ] || [ -z "$extension" ]; then
+    echo "Usage: $0 -p <directory_path> -e <media_file_extension>"
+    exit 1
+fi
+
+total_duration=0
+for file in "$directory"/*."$extension"; do
+    if [ -f "$file" ]; then
+        duration=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$file")
+        total_duration=$(echo "$total_duration + $duration" | bc)
+    fi
+done
+
+total_seconds=$(echo "scale=2; $total_duration / 1" | bc)
+total_minutes=$(echo "scale=2; $total_duration / 60" | bc)
+total_hours=$(echo "scale=2; $total_minutes / 60" | bc)
+echo "$total_hours hours | $total_minutes minutes | $total_seconds seconds "
