@@ -50,4 +50,6 @@ handy.media_duration -p ~/Downloads -e mp4
 ```
 
 ### Output
+```bash
 2.87 hours | 172.46 minutes | 10347.61 seconds 
+```
