@@ -53,3 +53,11 @@ handy.media_duration -p ~/Downloads -e mp4
 ```bash
 2.87 hours | 172.46 minutes | 10347.61 seconds 
 ```
+
+## compress
+Lossless compression of MP4 files in a directory.
+
+### Usage
+```bash
+handy.comporess DIRECTORY_PATH
+```
