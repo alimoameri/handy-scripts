@@ -13,7 +13,7 @@ python3 handy.urldecoder https%3A%2F%2Fgoogle.com%2Fsearch%3Fq%3Durldecode%2Bbas
 ```
 
 ```bash
-bash handy.mp4slen <directory_path>
+bash handy.media_duration -p <directory_path> -e <media_file_extension>
 ```
 
 ## urldecoder
@@ -41,7 +41,7 @@ Calculate the total duration of specific media files in a directory.
 
 ### Usage:
 ```bash
-bash handy.media_duration <directory_path> <media_file_extension>
+bash handy.media_duration -p <directory_path> -e <media_file_extension>
 ```
 
 ### Example
